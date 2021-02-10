@@ -6,14 +6,12 @@ import com.spring.service.UserMapper;
 import com.spring.service.UserService;
 import java.util.List;
 import java.util.stream.Collectors;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
-@ResponseBody
+@RestController
 @RequestMapping("/user")
 public class UserController {
     private final UserService userService;
