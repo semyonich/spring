@@ -7,6 +7,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserMapper {
     public UserResponseDto makeDto(User user) {
-        return new UserResponseDto(user.getId(), user.getName(), user.getEmail());
+        UserResponseDto dtoUser = new UserResponseDto();
+        dtoUser.setId(user.getId());
+        dtoUser.setName(user.getName());
+        dtoUser.setEmail(user.getEmail());
+        return dtoUser;
     }
 }
